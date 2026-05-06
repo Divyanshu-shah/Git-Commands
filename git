@@ -1,0 +1,42 @@
+📝 Common Git Commands
+  
+| Command        | Description                     |
+| -------------- | ------------------------------- |
+| `git init`     | Initialize a new Git repository |
+| `git clone`    | Copy a repository               |
+| `git add`      | Stage files for commit          |
+| `git commit`   | Save changes with a message     |
+| `git branch`   | Create or list branches         |
+| `git checkout` | Switch branches                 |
+| `git merge`    | Combine branches                |
+| `git push`     | Upload code to remote           |
+| `git pull`     | Download code from remote       |
+
+
+🌿 Git Branching Strategy Example
+Creating a Repository with Three Branches
+
+# 1. Initialize git
+git init
+
+# 2. Connect to GitHub repository (public)
+git remote add origin https://github.com/username/repo-name.git
+
+# 3. Make main branch and push abstraction file
+git branch -M main
+git add .
+git commit -m "Added abstraction application in main branch"
+git push -u origin main
+
+# 4. Create second branch (subset of main)
+git checkout -b branch-two
+git add .
+git commit -m "Extended abstraction application"
+git push -u origin branch-two
+
+# 5. Create third branch (separate)
+git checkout main
+git checkout -b branch-three
+git add .
+git commit -m "Separate abstraction application"
+git push -u origin branch-three
